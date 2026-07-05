@@ -2,11 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="cakkPMi1E1VklQtZNWwYtNPIGHSnEgKP2QXSTE4on-c" />
-    <title>Arvern Silicon open-source hardware</title>
+    <title>Arvern Silicon | Production-Grade RISC-V</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292f;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #0d1117;
+                color: #c9d1d9;
+            }
+            a { color: #58a6ff; }
+            table, th, td { border-color: #30363d !important; }
+            th { background-color: #161b22 !important; }
+            hr { border-top-color: #30363d; }
+        }
+        a { color: #0969da; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        hr { border: 0; border-top: 1px solid #d8dee4; margin: 2rem 0; }
+        table { border-collapse: collapse; width: 100%; margin: 1.5rem 0; }
+        th, td { border: 1px solid #d0d7de; padding: 12px; text-align: left; }
+        th { background-color: #f6f8fa; }
+        h2 { border-bottom: 1px solid #d8dee4; padding-bottom: 0.3em; margin-top: 2rem; }
+        ul { padding-left: 2rem; }
+        li { margin-bottom: 0.5rem; }
+        .text-center { text-align: center; }
+    </style>
 </head>
 <body>
-    <h1>Arvern Silicon</h1>
-    <p>Explore our open-source hardware design repositories directly on <a href="https://github.com/Arvern-Silicon">GitHub</a>.</p>
+<article>
+
+    <p class="text-center">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Arvern-Silicon/arvern/main/doc/img/aRVern_dark_title.png">
+            <img src="https://raw.githubusercontent.com/Arvern-Silicon/arvern/main/doc/img/aRVern_light_title.png" alt="aRVern" width="460">
+        </picture>
+    </p>
+
+    <p class="text-center">
+        <strong>Production-grade RISC-V. Plain Verilog. Zero bloat.</strong><br>
+        An open-source RISC-V processor core and a complete SoC ecosystem engineered with decades of commercial silicon experience.
+    </p>
+
+    <hr>
+
+    <h2>What is aRVern?</h2>
+    <p><strong>aRVern</strong> is a highly configurable RV32 RISC-V core and an independent IP ecosystem built for IoT and microcontroller-class applications. Written entirely in clean, portable <strong>Verilog-2001</strong> and built on a standard <strong>AHB-Lite</strong> fabric, it delivers commercial-grade predictability under a permissive <strong>BSD 3-Clause</strong> license.</p>
+    <p>No proprietary generators, no high-level synthesis wrappers, and no vendor lock-in. Just rock-solid RTL designed by industry veterans who know what it takes to bring a design to mass production.</p>
+    <p>The ecosystem is partitioned into three modular repositories:</p>
+
+    <h2>Repositories</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Repository</th>
+                <th>Focus</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>🧠 <strong><a href="https://github.com/Arvern-Silicon/arvern">arvern</a></strong></td>
+                <td><strong>CPU Core</strong></td>
+                <td>A single-issue, in-order, 4-stage <strong>RV32I[E]MBC</strong> RISC-V processor. Features optional M/B/C extensions, S+U privilege modes, Smrnmi NMI, hardware counters, and dual AHB-Lite manager interfaces. Highly parameterized to let designers dial in their perfect sweet spot between silicon area, frequency, and IPC.</td>
+            </tr>
+            <tr>
+                <td>🧩 <strong><a href="https://github.com/Arvern-Silicon/arvern-ips">arvern-ips</a></strong></td>
+                <td><strong>IP Library</strong></td>
+                <td>Reusable AHB-Lite building blocks: a multi-manager interconnect fabric, ROM/SRAM controllers, ACLINT timer, PLIC interrupt controller, a custom-CSR peripheral, and a reusable peripheral template.</td>
+            </tr>
+            <tr>
+                <td>🔌 <strong><a href="https://github.com/Arvern-Silicon/arvern-soc">arvern-soc</a></strong></td>
+                <td><strong>Reference SoCs</strong></td>
+                <td>End-to-end integration examples. Includes an ASIC chip example (with complete synthesis flow) and an FPGA target for the Terasic <strong>DE0-Nano-SoC</strong> board.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Where to start</h2>
+    <ul>
+        <li><strong>Exploring the architecture?</strong> Read the <strong><a href="https://github.com/Arvern-Silicon/arvern">arvern</a></strong> core README for the ISA specs, CSR inventory, and performance configuration options.</li>
+        <li><strong>Building a custom system?</strong> Grab the modular building blocks you need from <strong><a href="https://github.com/Arvern-Silicon/arvern-ips">arvern-ips</a></strong>.</li>
+        <li><strong>Want to see it run?</strong> Check out <strong><a href="https://github.com/Arvern-Silicon/arvern-soc">arvern-soc</a></strong> for ready-to-use ASIC and FPGA reference designs.</li>
+    </ul>
+
+    <h2>License</h2>
+    <p>All repositories in the Arvern Silicon ecosystem are licensed under the <strong>BSD 3-Clause</strong> license.</p>
+
+</article>
 </body>
 </html>
